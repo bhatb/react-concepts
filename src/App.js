@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./layout/Home";
@@ -25,6 +25,16 @@ function App() {
     backgroundColor: theme === 'light' ? '#f0f0f0' : '#444',
     color: theme === 'light' ? '#000' : '#fff',
   };
+
+  useEffect(() => {
+    console.log('Virtual DOM');
+    console.log( <App />);
+ 
+    return () => {
+      //cleapup function
+    }
+  }, [])
+  
 
   return (
     <div style={appStyle}>

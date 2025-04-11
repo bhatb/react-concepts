@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const EmployeeEditForm = () => {
-  const [employee, setEmployee] = useState(initialData);
+  const [employee, setEmployee] = useState();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
