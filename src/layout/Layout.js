@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
             <Nav.Link as={Link} to="/dom">Virtual DOM</Nav.Link>
             <Nav.Link as={Link} to="/layout">Layout</Nav.Link>
             <Nav.Link as={Link} to="/communication">Communication</Nav.Link>
+            <Nav.Link as={Link} to="/controlled">Contorlled / UnControlled</Nav.Link>
             <Nav.Link as={Link} to="/reducer">useReducer</Nav.Link>
             <Nav.Link as={Link} to="/forms">Forms</Nav.Link>
             <Nav.Link as={Link} to="/routing">Routing</Nav.Link>

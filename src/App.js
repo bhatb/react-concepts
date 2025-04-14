@@ -7,6 +7,7 @@ import Parent from "./communication/Parent";
 import UseReducerHook_Counter from "./topics/UseReducerHook";
 import EmployeeEditForm from "./topics/EmployeeEditForm";
 import { ThemeContext } from './topics/ThemeContext';
+import ControlledComponent from "./hooks/ControlledComponent";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -54,6 +55,7 @@ function App() {
             <Route path="/reducer" element={<UseReducerHook_Counter />} />
             <Route path="/forms" element={<EmployeeEditForm />} />
             <Route path="/context" element={<ThemeContext />} />
+            <Route path="/controlled" element={<ControlledComponent />} />
           </Routes>
         </Layout>
       </Router>
