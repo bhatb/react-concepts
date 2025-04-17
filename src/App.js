@@ -5,9 +5,10 @@ import Home from "./layout/Home";
 import UseEffectHook from "./hooks/UseEffectHook";
 import Parent from "./communication/Parent";
 import UseReducerHook_Counter from "./topics/UseReducerHook";
-import EmployeeEditForm from "./topics/EmployeeEditForm";
 import { ThemeContext } from './topics/ThemeContext';
 import ControlledComponent from "./hooks/ControlledComponent";
+import Memoization from "./topics/Memoization";
+import BasicForm from "./forms/BasicForm";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -53,9 +54,10 @@ function App() {
             <Route path="/hooks" element={<UseEffectHook />} />
             <Route path="/communication" element={<Parent />} />
             <Route path="/reducer" element={<UseReducerHook_Counter />} />
-            <Route path="/forms" element={<EmployeeEditForm />} />
+            <Route path="/forms" element={<BasicForm />} />
             <Route path="/context" element={<ThemeContext />} />
             <Route path="/controlled" element={<ControlledComponent />} />
+            <Route path="/usememo" element={<Memoization />} />
           </Routes>
         </Layout>
       </Router>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Memoization from "../topics/Memoization";
  
 const Layout = ({ children }) => {
   return (
@@ -15,8 +16,10 @@ const Layout = ({ children }) => {
             <Nav.Link as={Link} to="/layout">Layout</Nav.Link>
             <Nav.Link as={Link} to="/communication">Communication</Nav.Link>
             <Nav.Link as={Link} to="/controlled">Contorlled / UnControlled</Nav.Link>
+            <Nav.Link as={Link} to="/usememo">Memoization</Nav.Link>
+             
             <Nav.Link as={Link} to="/reducer">useReducer</Nav.Link>
-            <Nav.Link as={Link} to="/forms">Forms</Nav.Link>
+            <Nav.Link as={Link} to="/forms">Basic Form</Nav.Link>
             <Nav.Link as={Link} to="/routing">Routing</Nav.Link>
             <Nav.Link as={Link} to="/eventhandling">Event Handling</Nav.Link>
             <Nav.Link as={Link} to="/hooks">React Hooks</Nav.Link>
