@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-class Employee {
-  constructor(data = {}) {
-    this.name = data.name || '';
-    this.email = data.email || '';
-    this.gender = data.gender || '';
-    this.department = data.department || '';
-    this.isPermanent = data.isPermanent || false;
-    this.skills = data.skills || [];
-    this.joiningDate = data.joiningDate || '';
-    this.profile = data.profile || null;
-  }
-}
+import {Employee} from '../entities/Employee';
 
 const EmployeeForm = () => {
   const [employee, setEmployee] = useState(new Employee());
@@ -19,20 +8,20 @@ const EmployeeForm = () => {
     const { name, value, type, checked } = e.target;
 
     if (type === 'checkbox' && name === 'isPermanent') {
-      setEmployee(prev => new Employee.Employee({ ...prev, [name]: checked }));
+      setEmployee(prev => new Employee({ ...prev, [name]: checked }));
     } else if (type === 'checkbox' && name === 'skills') {
       const updatedSkills = checked
         ? [...employee.skills, value]
         : employee.skills.filter(skill => skill !== value);
-      setEmployee(prev => new Employee.Employee({ ...prev, skills: updatedSkills }));
+      setEmployee(prev => new Employee({ ...prev, skills: updatedSkills }));
     } else {
-      setEmployee(prev => new Employee.Employee({ ...prev, [name]: value }));
+      setEmployee(prev => new Employee({ ...prev, [name]: value }));
     }
   };
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-      setEmployee(prev => new Employee.Employee({ ...prev, profile: e.target.files[0] }));
+      setEmployee(prev => new Employee({ ...prev, profile: e.target.files[0] }));
     }
   };
 
