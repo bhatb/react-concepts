@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
              
             <Nav.Link as={Link} to="/reducer">useReducer</Nav.Link>
             <Nav.Link as={Link} to="/forms">Basic Form</Nav.Link>
+            <Nav.Link as={Link} to="/advancedform">Advanced Form</Nav.Link>
             <Nav.Link as={Link} to="/routing">Routing</Nav.Link>
             <Nav.Link as={Link} to="/eventhandling">Event Handling</Nav.Link>
             <Nav.Link as={Link} to="/hooks">React Hooks</Nav.Link>
